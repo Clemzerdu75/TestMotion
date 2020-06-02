@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: .4s ;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.Test1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background-color: violet;
+  border-radius: 20px;
+  margin: 0  auto;
+}
+
+.ToggleWrapper {
+  transform: scale(.6);
+  display: flex;
+  vertical-align: middle;
+  width: 80px;
+  height: 50px;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: inset 2.5px 2.5px 5px #c1b8ca, 
+            inset -2.5px -2.5px 5px #ede4f5;
+}
+.Toggle {
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 50%;
+}
+.PP {
+  position: absolute;
+  z-index: 2;
+  left: 25px;
+  top: 25px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255,255, 255, .95);
+  border-radius: 10px;
+  box-shadow:  5px 5px 10px #062dbc, 
+  -5px -5px 10px #083dfe;
+}
+h1{
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+p{
+  color: white;
+  margin: 0;
+  font-weight: bold;
+}
+
+.LeftText {
+text-align: right;
+  position: absolute;
+  z-index: 1;
+  right: 25px;
+  top: 25px;
+  width: 250px;
+  height: 100px;
+}
+.BottomText {
+  position: absolute;
+  z-index:1;
+  bottom: 25px;
+  left: 25px;
+  height: 125px;
+  width: 250px;
+}
+
+.Wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.ListofToggle {
+  position: absolute;
+  right: 0px;
+  bottom: -10px;
+  transform: scale(.8);
+}
+
+.DeleteWrapper {
+  position: fixed;
+  right: 100px;
+  top: 10px;
+}
+.DeleteField {
+  position: relative;
+  width: 200px;
+  height: 70px;
+  border-radius: 25px;
+  background-color: lightgrey;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+.DeleteButton {
+  width: 100px;
+  height: 60px;
+  margin: 5px 5px;
+  border-radius: 20px;
+  background: rgb(243, 96, 96);
+}
+#explanation {
+  color: rgb(243, 96, 96);
+  font-size: 12px;
+  opacity: 0;
+}
