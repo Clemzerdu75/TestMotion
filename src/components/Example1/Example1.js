@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import Toggle from "./Toggle"
@@ -16,9 +16,10 @@ const Example = () => {
         document.querySelector("body").style.backgroundColor = color;
     }  
     else {
-        color= "rgba(255,255,255, .4)";
+        color= "#e0e0e0";
         document.querySelector("body").style.backgroundColor = color;
     }
+
     return (
         <div>
 

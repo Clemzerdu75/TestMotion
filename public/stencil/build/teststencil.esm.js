@@ -1,0 +1,1 @@
+import{p as e,b as a}from"./p-d835b7ff.js";e().then(e=>a([["p-ed19b3c0",[[1,"moben-list",{name:[1],arrayData:[32]}],[1,"moben-button",{status:[32]}],[1,"moben-field",{type:[1],name:[1],placeholder:[1],inputValue:[32]}],[1,"my-component",{first:[1],middle:[1],last:[1]}],[1,"moben-card"]]]],e));
