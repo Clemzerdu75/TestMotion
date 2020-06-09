@@ -1,17 +1,15 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: .4s ;
+  transition: 0.4s;
   background-color: #e0e0e0;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 .InputWrapper {
   display: flex;
@@ -29,19 +27,18 @@ code {
   height: 150px;
   background-color: violet;
   border-radius: 20px;
-  margin: 0  auto;
+  margin: 0 auto;
 }
 
 .ToggleWrapper {
-  transform: scale(.6);
+  transform: scale(0.6);
   display: flex;
   vertical-align: middle;
   width: 80px;
   height: 50px;
   border-radius: 40px;
   overflow: hidden;
-  box-shadow: inset 2.5px 2.5px 5px #c1b8ca, 
-            inset -2.5px -2.5px 5px #ede4f5;
+  box-shadow: inset 2.5px 2.5px 5px #c1b8ca, inset -2.5px -2.5px 5px #ede4f5;
 }
 .Toggle {
   width: 40px;
@@ -57,26 +54,25 @@ code {
   top: 25px;
   width: 100px;
   height: 100px;
-  background: rgba(255,255, 255, .95);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 10px;
-  box-shadow:  5px 5px 10px #062dbc, 
-  -5px -5px 10px #083dfe;
+  box-shadow: 5px 5px 10px #062dbc, -5px -5px 10px #083dfe;
 }
-h1{
+h1 {
   color: white;
   font-weight: bold;
   margin: 0;
   font-family: "Helvetica Neue", sans-serif;
 }
 
-p{
+p {
   color: white;
   margin: 0;
   font-weight: bold;
 }
 
 .LeftText {
-text-align: right;
+  text-align: right;
   position: absolute;
   z-index: 1;
   right: 25px;
@@ -86,7 +82,7 @@ text-align: right;
 }
 .BottomText {
   position: absolute;
-  z-index:1;
+  z-index: 1;
   bottom: 25px;
   left: 25px;
   height: 125px;
@@ -103,7 +99,7 @@ text-align: right;
   position: absolute;
   right: 0px;
   bottom: -10px;
-  transform: scale(.8);
+  transform: scale(0.8);
 }
 
 .DeleteWrapper {
@@ -140,3 +136,35 @@ text-align: right;
   transform: translateX(-50%);
 }
 
+.Main_Title {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 8vw;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  text-align: center;
+}
+.anim_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.testAnim {
+  width: 150px;
+  height: 150px;
+  border: solid 1px black;
+  animation: 0.4s ease-in launch;
+}
+
+@keyframes launch {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
