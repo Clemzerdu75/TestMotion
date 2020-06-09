@@ -1,0 +1,81 @@
+.ButtonWrapperrrs {
+    transform: scale(.5);
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    box-shadow:  5px 5px 10px #bebebe, 
+                 -5px -5px 10px #ffffff,
+                 inset 5px 5px 10px #bebebe, 
+                 inset -5px -5px 10px #ffffff;
+
+}
+
+.ButtonBorderrrrs {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    box-shadow:  5px 5px 10px #bebebe, 
+                -5px -5px 10px #ffffff;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.CircleDiv {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 150px;
+    height: 150px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    box-shadow:  5px 5px 10px #bebebe, 
+                -5px -5px 10px #ffffff;
+
+    .Separator {
+        position: absolute;
+        z-index: 3;
+        height: 90%;
+        width: 10px;
+        left: calc(50% - 5px);
+        top: 5%;
+        box-shadow: inset 5px 5px 5px #bebebe, 
+        inset -5px -5px 5px #ffffff,
+         5px 5px 5px #bebebe, 
+         -5px -5px 5px #ffffff;
+        border-radius: 10px;
+    }
+    .MT {
+        z-index: 1;
+        position: absolute;
+        width: 50%;
+        height: 150px;
+        border-top-left-radius: 150px;
+        border-bottom-left-radius: 150px;
+        font-weight: bold;
+        font-size: 2em;
+        color: white;
+        text-shadow:  2px 2px 3px #d4d2d2;
+        transition: .4s ease-in; 
+    }
+    .AM {
+        z-index: 1;
+        position: absolute;
+        width: 50%;
+        height: 150px;
+        border-top-right-radius: 150px;
+        border-bottom-right-radius: 150px;
+        top: 0;
+        right: 0;
+        font-weight: bold;
+        font-size: 2em;
+        color: white;
+        text-shadow:  2px 2px 3px #cfcdcd;
+        transition: .4s ease-in; 
+    }
+}
