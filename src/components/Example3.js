@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion, Variants } from "framer-motion";
+import { motion /*Variants*/ } from "framer-motion";
 
 const variants = {
   open: {
@@ -44,7 +44,7 @@ const Example3 = () => {
       {showList && (
         <motion.div className="anim_list" variants={variants}>
           {testarr.map((el) => (
-            <div className="testAnim"></div>
+            <motion.div className="testAnim"></motion.div>
           ))}
         </motion.div>
       )}

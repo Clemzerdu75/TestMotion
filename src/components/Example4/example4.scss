@@ -1,32 +1,46 @@
-.ButtonWrapperrrs {
-    transform: scale(.5);
-    position: absolute;
-    top: calc(50% - 150px);
-    left: calc(50% - 150px);
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: #e0e0e0;
-    box-shadow:  5px 5px 10px #bebebe, 
-                 -5px -5px 10px #ffffff,
-                 inset 5px 5px 10px #bebebe, 
-                 inset -5px -5px 10px #ffffff;
-
+.CardWrapper {
+  position: relative;
+  width: 50vw;
+  height: auto;
+  border-radius: 24px;
+  margin: 50px 20px;
+  padding: 20px 20px;
+  padding-bottom: 50px;
+  box-shadow: 5px 5px 10px #b8b9b9, -5px -5px 10px #fbfeff;
+  transition: 0.4s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  transition: 0.4s ease-in;
 }
 
-.ButtonBorderrrrs {
+.ButtonWrappers {
+  position: absolute;
+  top: -36px;
+  left: -50px;
+  transform: scale(0.55);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff, inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+
+  .AffluenceIndicator {
+    position: absolute;
+    z-index: 15;
+  }
+  .ButtonBorders {
     position: relative;
     width: 250px;
     height: 250px;
     background: #e0e0e0;
     border-radius: 50%;
-    box-shadow:  5px 5px 10px #bebebe, 
-                -5px -5px 10px #ffffff;
-    margin-left: 25px;
-    margin-top: 25px;
-}
+    box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+    top: 25px;
+    left: 25px;
+  }
 
-.CircleDiv {
+  .CircleDiv {
     position: absolute;
     top: 50px;
     left: 50px;
@@ -34,48 +48,140 @@
     height: 150px;
     background: #e0e0e0;
     border-radius: 50%;
-    box-shadow:  5px 5px 10px #bebebe, 
-                -5px -5px 10px #ffffff;
+    box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
 
     .Separator {
-        position: absolute;
-        z-index: 3;
-        height: 90%;
-        width: 10px;
-        left: calc(50% - 5px);
-        top: 5%;
-        box-shadow: inset 5px 5px 5px #bebebe, 
-        inset -5px -5px 5px #ffffff,
-         5px 5px 5px #bebebe, 
-         -5px -5px 5px #ffffff;
-        border-radius: 10px;
+      border-radius: 10px;
+      box-shadow: inset 5px 5px 5px #bebebe, inset -5px -5px 5px #ffffff;
+      position: absolute;
+      z-index: 3;
+      height: 90%;
+      width: 10px;
+      left: calc(50% - 5px);
+      top: 5%;
     }
     .MT {
-        z-index: 1;
-        position: absolute;
-        width: 50%;
-        height: 150px;
-        border-top-left-radius: 150px;
-        border-bottom-left-radius: 150px;
-        font-weight: bold;
-        font-size: 2em;
-        color: white;
-        text-shadow:  2px 2px 3px #d4d2d2;
-        transition: .4s ease-in; 
+      z-index: 1;
+      position: absolute;
+      width: 50%;
+      height: 150px;
+      border-top-left-radius: 150px;
+      border-bottom-left-radius: 150px;
+      font-weight: bold;
+      font-size: 2em;
+      color: white;
+      text-shadow: 2px 2px 3px #d4d2d2;
+      transition: 0.4s ease-in;
+      &.active {
+        background: #42c19a;
+      }
     }
     .AM {
-        z-index: 1;
-        position: absolute;
-        width: 50%;
-        height: 150px;
-        border-top-right-radius: 150px;
-        border-bottom-right-radius: 150px;
-        top: 0;
-        right: 0;
-        font-weight: bold;
-        font-size: 2em;
-        color: white;
-        text-shadow:  2px 2px 3px #cfcdcd;
-        transition: .4s ease-in; 
+      z-index: 1;
+      position: absolute;
+      width: 50%;
+      height: 150px;
+      border-top-right-radius: 150px;
+      border-bottom-right-radius: 150px;
+      top: 0;
+      right: 0;
+      font-weight: bold;
+      font-size: 2em;
+      color: white;
+      text-shadow: 2px 2px 3px #cfcdcd;
+      transition: 0.4s ease-in;
+      &.active {
+        background: #42c19a;
+      }
     }
+  }
+}
+
+.TESTTEST {
+  margin-left: 200px;
+  width: 100%;
+  h1 {
+    color: #42c19a;
+  }
+
+  .SimpleRow {
+    display: flex;
+    flex-direction: row;
+
+    .TimeWrapper {
+      width: 80%;
+
+      .header {
+        display: flex;
+        flex-direction: center;
+        align-items: center;
+        h2 {
+          color: #7783a1;
+          font-weight: 600;
+        }
+        .AddButtonWrapper {
+          margin-top: 5px;
+          margin-left: 20px;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          box-shadow: 2px 2px 5px #c0c1c4, -2px -2px 5px #f3f3f3;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(145deg, #ebecec, #d4d5d7);
+        }
+      }
+      .UserList {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-right: 30px;
+      }
+    }
+  }
+}
+
+.UserMarker {
+  width: 50px;
+  height: 50px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  box-shadow: inset 5px 5px 10px #c8c9cb, inset -5px -5px 10px #ffffff;
+  &.expand {
+    margin: 15px;
+  }
+  .UserWrapper {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    background: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.ExpandButton {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% + 15px);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.EmptySeats {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 15px;
+  box-shadow: 5px 5px 10px #c8c9cb, -5px -5px 10px #ffffff, inset 5px 5px 10px #c8c9cb, inset -5px -5px 10px #ffffff;
 }
