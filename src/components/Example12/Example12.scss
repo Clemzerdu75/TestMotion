@@ -1,0 +1,143 @@
+.MainBody3 {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  // border: solid 1px green;
+  .ChoosePage {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    p {
+      cursor: pointer;
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none; 
+      color: black;
+    }
+  }
+  h1 {
+    color: black;
+    width: 100%;
+    text-align: center;
+  }
+  .PageWrapper {
+    margin-top: 100px;
+    .Page {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: calc(100vh - 100px);
+      position: relative;
+
+      .LeftPart {
+        position: relative;
+       display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        width: 23%;
+        height: 90%;
+        margin-left: .5%;
+        transition: .4s ease-in-out;
+        .Section {
+          box-shadow: 5px 5px 15px rgba(0,0,0, .15);
+          border-radius: 5px;
+          width: 100%;
+          &.First {
+            height: 200px;
+          }
+          &.Second {
+            height: 500px;
+          }
+          &.Third {
+            height: 100px;
+          }
+          &.Fourth {
+            height: 250px;
+          }
+          &.Fifth {
+            height: 300px;
+          }
+        }
+      }
+      .Content {
+        position: absolute;
+        left: 25%;
+        width: 73%;
+        height: 90%;
+        transition: .4s ease-in-out;
+        border-radius: 10px;
+        box-shadow: 10px 10px 30px rgba(0,0,0, .2);
+      }
+  
+      &.Comming {
+        .LeftPart {
+          margin-left: .5%;
+        }
+        .Content {
+          margin-top: unset;
+        }
+      }
+  
+      &.Leaving {
+        display: flex;
+        .LeftPart {
+          margin-left: -35%;
+          margin-top: 2%;
+         
+        }
+        .Content {
+          margin-top: 100vh;
+          margin-left: 5%;
+          transform: rotate(-2deg);
+        }
+      }
+      &.Unactive {
+        .LeftPart {
+          margin-left: -35%;
+          margin-top: 2%;
+        }
+        .Content {
+          margin-top: 100vh;
+          margin-left: 5%;
+          transform: rotate(-2deg);
+        }
+      }
+
+
+
+      &.tertiary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .Content {
+          margin-top: -100px;
+          width: 50vw;
+          height: 60vh;
+          transition: .4s ease-in-out;
+          background: #f3f3f3;
+          box-shadow: none;
+          transform: scale(0.99);
+        }
+      }
+      &.Coming {
+        .Content {
+          box-shadow:  8px 8px 15px #cfcfcf, 
+          -8px -8px 15px #ffffff;
+          
+          transform: scale(1);
+        }
+       
+      }
+    }
+
+  }
+  
+}

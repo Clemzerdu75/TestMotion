@@ -1,14 +1,21 @@
 .SpaceTitle {
   font-size: 20em;
   position: absolute;
-  top: 25%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+.SpaceTitle2 {
+  font-size: 5em;
+  position: absolute;
+  top: 60%;
+  left: 53%;
+  width: 40%;
+  transform: translate(-50%, -50%);
+}
+
 canvas {
-  width: 100vw;
-  height: 100vh;
   margin: 0;
   padding: 0;
   outline: none;

@@ -19,6 +19,11 @@ const Example = () => {
     document.querySelector("body").style.backgroundColor = color;
   }
 
+  const transition = {
+    power: 0.2,
+    timeConstant: 200,
+  };
+
   return (
     <div>
       <motion.div
@@ -31,15 +36,9 @@ const Example = () => {
       <motion.div
         style={{ position: "absolute", width: "200px", height: "200px", border: "solid 3px red" }}
         drag
-        dragConstraints={{ left: 0, right: "calc(100% - 100px)", top: 0, bottom: "calc(100% - 100px)" }}
-        dragMomentum={false}
+        dragConstraints={{ left: 0, right: 500, top: 0, bottom: 500 }}
         // dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-        onDragStart={() => {
-          document.querySelector("body").style.backgroundColor = "lightgrey";
-        }}
-        onDragEnd={() => {
-          document.querySelector("body").style.backgroundColor = color;
-        }}
+        dragTransition={transition}
       ></motion.div>
 
       <motion.div

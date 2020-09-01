@@ -1,0 +1,61 @@
+.Ex9Wrapper {
+  position: relative;
+  padding: 50px;
+  padding-top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px #686767;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(145deg, #696868, #222222);
+  transition: 0.8s ease-in-out;
+  .SectionTitle {
+    font-size: 4em;
+    color: #42c19a;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 300;
+    margin: 0;
+  }
+  .ContentWrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 30vw;
+    h2,
+    h3 {
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0;
+      text-align: left;
+    }
+    h3 {
+      font-weight: 300;
+      font-size: 1.2vw;
+      color: lightgrey;
+    }
+    h2 {
+      font-weight: 500;
+      margin-top: -0.5vw;
+      margin-bottom: 1.5vw;
+      font-size: 2.5vw;
+    }
+    .Section {
+      width: 33%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      &.Right {
+        h2,
+        h3 {
+          text-align: right;
+        }
+        h2 {
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}
