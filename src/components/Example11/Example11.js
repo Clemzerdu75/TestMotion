@@ -17,7 +17,7 @@ const Example11 = () => {
     else if (path.includes("Right")) setIndex([2, 1]);
     else if (path.includes("Bottom")) setIndex([1, 2]);
     else setIndex([1, 1]);
-  }, []);
+  }, [location.pathname]);
 
   useEffect(() => {
     const wrapper = document.getElementById("Wrapper22");

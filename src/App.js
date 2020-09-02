@@ -13,6 +13,7 @@ import Example10 from "./components/Example10/Example10";
 import Example11 from "./components/Example11/Example11";
 import Example12 from "./components/Example12/Example12";
 import Example13 from "./components/Example13/Example13";
+import Example14 from "./components/Example14/Example14";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/Example11" component={Example11} />
           <Route path="/Example12" component={Example12} />
           <Route path="/Example13" component={Example13} />
+          <Route path="/Example14" component={Example14} />
         </Switch>
         <div className="LinksToPage">
           <Link to="/">Page 1</Link>
@@ -47,6 +49,7 @@ function App() {
           <Link to="/Example11">Page 11</Link>
           <Link to="/Example12">Page 12</Link>
           <Link to="/Example13">Page 13</Link>
+          <Link to="/Example14">Page 14</Link>
         </div>
       </div>
     </BrowserRouter>

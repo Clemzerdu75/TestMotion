@@ -2,6 +2,14 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  .logo_fun {
+    z-index: -1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+  }
   // border: solid 1px green;
   .ChoosePage {
     position: fixed;
@@ -75,6 +83,7 @@
         transition: .4s ease-in-out;
         border-radius: 10px;
         box-shadow: 10px 10px 30px rgba(0,0,0, .2);
+        background: #f3f3f3;
       }
   
       &.Comming {

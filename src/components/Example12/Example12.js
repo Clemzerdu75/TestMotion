@@ -19,7 +19,6 @@ const Example12 = () => {
       page1.current.className += " Unactive"
       page2.current.className += " Leaving";
       setTimeout(() => {
-
         page2.current.className += " Unactive";
       }, 400)
       setTimeout(() => {
@@ -53,13 +52,14 @@ const Example12 = () => {
         page1.current.style.display = "none"
         page3.current.className += " Coming"
       }, 400)
-
     }
   }, [index])
 
   return (
     <div className="MainBody3">
-      <div class="ChoosePage">
+      {index !== 2 && <img className="logo_fun" alt="hello" src="logo.png"></img>}
+
+      <div className="ChoosePage">
         <p onClick={() => setIndex(0)}>Page 1</p>
         <p onClick={() => setIndex(1)}>Page 2</p>
         <p onClick={() => setIndex(2)}>Page 3</p>
@@ -86,8 +86,6 @@ const Example12 = () => {
           <div className="Content"></div>
         </div>
       </div>
-
-
     </div>
   );
 };

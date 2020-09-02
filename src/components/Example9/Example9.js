@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useRef, useMemo, useEffect } from "react";
+import React, { useState, useRef, useMemo, useEffect } from "react";
 import * as THREE from "three";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { Canvas, useThree, useFrame } from "react-three-fiber";

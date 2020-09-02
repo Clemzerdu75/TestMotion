@@ -33,6 +33,7 @@ const Example13 = () => {
 
   return (
     <div className="MainBody4">
+      <img className="logo_fun" alt="hello" src="logo.png"></img>
       <div class="ChoosePage">
         <p onClick={() => setIndex(0)}>Page 1</p>
         <p onClick={() => setIndex(1)}>Page 2</p>
@@ -49,7 +50,7 @@ const Example13 = () => {
             <h1>Calendar</h1>
           </div>
           <div className="Container" ref={tab}>
-            <h1>Tab</h1>
+            <h1>Table</h1>
           </div>
         </div>
       </div>
