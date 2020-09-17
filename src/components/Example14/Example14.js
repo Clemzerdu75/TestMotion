@@ -19,7 +19,7 @@ const Grid = () => {
 
   useEffect(() => {
     const grid = document.querySelector(".grid");
-    wrapGrid(grid, { easing: "circOut", stagger: 0, duration: 500 });
+    wrapGrid(grid, { easing: "circOut", stagger: 0, duration: 400 });
   }, []);
 
   const handleExpand = (index) => {
@@ -29,10 +29,10 @@ const Grid = () => {
   return (
     <>
       <div className="ClickableArea Left" onClick={() => {
-        handleExpand(expanded > 0 ? expanded - 1 : 4);
+        handleExpand(expanded > 0 ? expanded - 1 : 5);
       }}></div>
       <div className="ClickableArea Right" onClick={() => {
-        handleExpand(expanded < 4 ? expanded + 1 : 0);
+        handleExpand(expanded < 5 ? expanded + 1 : 0);
       }}></div>
       <div className="grid">
         {[...Array(5).keys()].map((i) => (
