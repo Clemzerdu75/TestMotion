@@ -54,7 +54,6 @@ const Example15 = () => {
 
   return (
     <div className="ChatBotWrapper">
-      <button></button>
       <ChatBotWrapper
         handleNameP={handleName}
         handleOfficesP={handleOffices}
@@ -63,13 +62,6 @@ const Example15 = () => {
     </div>
   )
 }
-
-
-
-
-
-
-
 
 export default Example15;
 

@@ -18,12 +18,18 @@ const Abo = () => (
 )
 
 const Review = (props) => {
-    console.log(props)
     return (
         <div>
         </div>
     )
 }
+
+const SubAlone = () => (
+    <div />
+)
+const SeeAllSub = () => (
+    <div />
+)
 
 const theme = {
     background: '#ebedef',
@@ -47,6 +53,7 @@ const ChatBotWrapper = ({ handleNameP, handleOfficesP, handleEnd, handleUserP })
         lastname = props.steps.lastname.value;
         return (handleNameP(props))
     }
+
     const handleOffices = (props, etabs) => {
         if (checkEtab(props.steps.etab.value, etabs) === true) etabs.push(props.steps.etab.value);
         offices.push({
@@ -72,7 +79,6 @@ const ChatBotWrapper = ({ handleNameP, handleOfficesP, handleEnd, handleUserP })
         }
         return true;
     }
-
 
     return (
         <ThemeProvider theme={theme}>
@@ -125,8 +131,6 @@ const ChatBotWrapper = ({ handleNameP, handleOfficesP, handleEnd, handleUserP })
                                 return 'value must be a number';
                             } else if (value < 0) {
                                 return 'value must be positive';
-                            } else if (value > 120) {
-                                return `${value}? Come on!`;
                             }
                             return true;
                         },
@@ -154,7 +158,16 @@ const ChatBotWrapper = ({ handleNameP, handleOfficesP, handleEnd, handleUserP })
                         component: <Review />,
                         trigger: 'reviewChoices',
                     },
-
+                    {
+                        id: 'suggestedSub',
+                        component: <SubAlone />,
+                        trigger: 'OtherSubChoices'
+                    },
+                    {
+                        id: 'seeAllSub',
+                        component: <SeeAllSub />,
+                        trigger: 'OtherSubChoices'
+                    },
 
                     /*--- Multiple Choice steps --- */
                     {
@@ -186,6 +199,20 @@ const ChatBotWrapper = ({ handleNameP, handleOfficesP, handleEnd, handleUserP })
                             { value: "modify users", label: "Modifier la liste d'utilisateurs", trigger: 'userExplanation' },
                             { value: 'modify offices', label: 'Modifier les établissements et bureaux', trigger: 'reviewIntro' },
                             { value: 'subcription', label: "Passer aux abonnements", trigger: 'subscriptionIntro' }
+                        ]
+                    },
+                    {
+                        id: 'OtherSubChoices',
+                        options: [
+                            { value: 'Choose this one', label: "Choisir cet abonnements", trigger: 'ConfirmSub' },
+                            { value: 'see Other', label: "Voir les autres options", trigger: 'seeAllSub' },
+                        ]
+                    },
+                    {
+                        id: 'ConfirmSub',
+                        options: [
+                            { value: "yes", label: 'Je confirme mon choix' },
+                            { value: "no", label: 'Je souhaite revenir a la question précedente', trigger: "seeAllSub" }
                         ]
                     },
 
@@ -261,9 +288,8 @@ const ChatBotWrapper = ({ handleNameP, handleOfficesP, handleEnd, handleUserP })
                     {
                         id: 'subscriptionIntro',
                         message: 'Passons maintenant au choix de l"abonnement',
+                        trigger: 'suggestedSub',
                     },
-
-
                 ]}
             />
         </ThemeProvider>
